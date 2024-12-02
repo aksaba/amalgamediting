@@ -21,6 +21,11 @@
         }
         h1 {
             color: #007bff;
+			font-size: 32pt;
+        }
+        .side-heading {
+            color: #000033;
+			font-size: 14pt;
         }
         .services {
             display: grid;
@@ -39,27 +44,72 @@
             background-color: #f4f4f4;
             padding: 20px;
         }
+        .intro-text {
+            margin-top: 30px;
+            font-weight: bold;
+            text-align: center;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
         .intro-banner {
             max-width: 100%;
             height: auto;
             margin-bottom: 20px;
         }
+        .faq-item {
+        margin-bottom: 10px;
+        border: 1px solid #ddd;
+		}
+		.faq-question {
+			background-color: #f4f4f4;
+			padding: 10px;
+			cursor: pointer;
+			font-weight: bold;
+		}
+		.faq-answer {
+			display: none;
+			padding: 10px;
+			background-color: #fff;
+		}
+		.faq-answer.show {
+			display: block;
+		}
     </style>
+    <script>
+    document.querySelectorAll('.faq-question').forEach(question => {
+        question.addEventListener('click', () => {
+            const answer = question.nextElementSibling;
+            answer.classList.toggle('show');
+        });
+    });
+	</script>
 </head>
 <body>
     <header>
-        <h1>Amalgam Editing</h1>
-        <p>Professional Editing & Proofreading Services</p>
+        <h1>AMALGAM EDITING</h1>
+        <p class='side-heading'><b>Professional Editing & Proofreading Services</b></p>
     </header>
 
     <main>
         <section>
-            <p>Revolutionizing editing with a hybrid human and AI approach: Faster, more precise, and meticulously crafted to elevate your written content.</p>
+            <p class='intro-text'>Revolutionizing editing with a hybrid human and AI approach: Faster, more precise, and meticulously crafted to elevate your written content.</p>
             
             <!-- Placeholder for poster image -->
             <img src="hai_editing.png" alt="Hybrid Editing Service Poster" class="intro-banner">
         </section>
-
+		<section class="faq">
+		<h2>Frequently Asked Questions</h2>
+		<div class="faq-container">
+			<div class="faq-item">
+				<div class="faq-question">What services do you offer?</div>
+				<div class="faq-answer">We provide comprehensive editing and proofreading services for academic and professional documents, utilizing a hybrid human and AI approach.</div>
+			</div>
+			<div class="faq-item">
+				<div class="faq-question">How long does editing take?</div>
+				<div class="faq-answer">Turnaround time varies depending on document length and complexity, but our hybrid approach ensures faster processing compared to traditional editing services.</div>
+			</div>
+		</div>
+		</section>
         <section>
             <h2>About Our Services</h2>
             <p>At Amalgam Editing, we provide meticulous editing and proofreading services to help you polish your written work to perfection. Whether you're an academic or professional, we ensure your document is clear, concise, and error-free.</p>
