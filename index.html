@@ -91,6 +91,20 @@
 		.faq-answer.show {
 			display: block;
 		}
+		nav ul {
+			display: flex;
+			justify-content: center;
+			list-style-type: none;
+			padding: 10px;
+			background-color: #f4f4f4;
+		}
+		nav ul li {
+			margin: 0 10px;
+		}
+		nav ul li a {
+			text-decoration: none;
+			color: #007bff;
+		}
     </style>
 </head>
 <script>
@@ -108,7 +122,15 @@
         <h1>AMALGAM EDITING</h1>
         <p class='side-heading'><b>Professional Editing & Proofreading Services</b></p>
     </header>
-
+	<nav>
+    <ul>
+        
+        
+        <li><a href="#services">Our Services</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        
+    </ul>
+</nav>
     <main>
 		<section class="contact">
             <h2>Get in Touch</h2>
@@ -123,7 +145,7 @@
         </section>
 		
         <section>
-            <h2>About Our Services</h2>
+            <h2 id="services">About Our Services</h2>
             <p>At Amalgam Editing, we provide meticulous editing and proofreading services to help you polish your written work to perfection. Whether you're an academic or professional, we ensure your document is clear, concise, and error-free.</p>
         </section>
 
@@ -139,7 +161,7 @@
         </section>
         
         <section class="faq">
-		<h2>Frequently Asked Questions</h2>
+		<h2 id="faq">Frequently Asked Questions</h2>
 		<div class="faq-container">
 			<div class="faq-item">
 				<div class="faq-question">Why can't I just use ChatGPT to edit? Why do I need an "expert human" editor?</div>
