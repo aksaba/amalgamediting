@@ -6,171 +6,249 @@
     <title>Amalgam Editing - Technical Editing Services</title>
     <style>
         body {
-            font-family: 'Roboto', sans-serif;
+            font-family: Arial, sans-serif;
             line-height: 1.6;
-            max-width: 1000px;
+            max-width: 800px;
             margin: 0 auto;
             padding: 20px;
-            color: #2c3e50;
-            background-color: #ecf0f1;
+            color: #333;
         }
         header {
-            background-color: #3498db;
-            color: #fff;
+            background-color: #f4f4f4;
             text-align: center;
-            padding: 2rem;
-            border-bottom: 3px solid #2980b9;
+            padding: 1rem;
+            border-bottom: 2px solid #007bff;
         }
         h1 {
-            font-size: 3rem;
-            font-family: 'Montserrat', sans-serif;
+            color: #007bff;
+			font-size: 42pt;
+			font-family: Garamond;
         }
         .side-heading {
-            font-size: 1.2rem;
+            color: #000033;
+			font-size: 14pt;
         }
         .services {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 20px;
             margin-top: 20px;
-            border-bottom: 3px solid #2980b9;
+            border-bottom: 2px solid #007bff;
         }
         .service {
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            background-color: #f9f9f9;
+            padding: 15px;
+            border-radius: 5px;
+            
         }
-        .contact, .intro-text, .faq {
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        .contact {
             margin-top: 30px;
+            text-align: center;
+            background-color: #f4f4f4;
+            padding: 20px;
+            border-bottom: 2px solid #007bff;
+			
         }
         .intro-text {
+            margin-top: 30px;
             font-weight: bold;
             text-align: justify;
+            background-color: #f4f4f4;
+            padding: 20px;
         }
-        .intro-banner, .workflow-image, .price-image {
+        .intro-banner {
             max-width: 100%;
             height: auto;
             margin-bottom: 20px;
         }
-        .faq-item {
-            margin-bottom: 10px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
+        .gptresponse-image {
+            
+            padding-bottom: 10px;
         }
-        .faq-question {
-            background-color: #3498db;
-            color: #fff;
-            padding: 10px;
-            cursor: pointer;
-            font-weight: bold;
+		.workflow-image {
+            
+            padding-bottom: 10px;
+            max-width: 100%;
+            height: auto; 
         }
-        .faq-answer {
-            display: none;
-            padding: 10px;
-            background-color: #fff;
+        .price-image {
+            
+            padding-bottom: 10px;
+            max-width: 100%;
+            height: auto; 
         }
-        .faq-answer.show {
-            display: block;
-        }
-        nav ul {
-            display: flex;
-            justify-content: center;
-            list-style-type: none;
-            padding: 10px;
-            background-color: #3498db;
-            border-radius: 10px;
-        }
-        nav ul li {
-            margin: 0 10px;
-        }
-        nav ul li a {
-            text-decoration: none;
-            color: #fff;
-        }
+        .faq{
+			border-bottom: 2px solid #007bff;
+		}
+			.faq-item {
+			margin-bottom: 10px;
+			border: 1px solid #ddd;
+		}
+		.faq-question {
+			background-color: #f4f4f4;
+			padding: 10px;
+			cursor: pointer;
+			font-weight: bold;
+		}
+		.faq-answer {
+			display: none;
+			padding: 10px;
+			background-color: #fff;
+		}
+		.faq-answer.show {
+			display: block;
+		}
+		nav ul {
+			display: flex;
+			justify-content: center;
+			list-style-type: none;
+			padding: 10px;
+			background-color: #f4f4f4;
+		}
+		nav ul li {
+			margin: 0 10px;
+		}
+		nav ul li a {
+			text-decoration: none;
+			color: #007bff;
+		}
     </style>
 </head>
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const answer = question.nextElementSibling;
+                answer.classList.toggle('show');
+            });
+        });
+    });
+</script>
+
+
 <body>
+	
+	
     <header>
         <h1>AMALGAM EDITING</h1>
         <p class='side-heading'><b>AI-Enhanced Technical Editing Services</b></p>
     </header>
-    <nav>
-        <ul>
-            <li><a href="#services">Our Services</a></li>
-            <li><a href="#faq">FAQ</a></li>
-        </ul>
+    
+    
+	<nav>
+		What to know about <a href="#services">our services</a>. Do you have any specific questions? Check out the <a href="#faq">FAQ</a> section. 
     </nav>
     <main>
-        <section class="contact">
+		
+		<section class="contact">
             <h2>Get in Touch</h2>
             <p><b>Email: amalgamediting@outlook.com</b></p>
             <p>Ready to elevate your writing? Contact us for a free consultation and quote. Read on to know more.</p>
         </section>
+        
+        
         <section>
-            <p class='intro-text'>Revolutionizing editing with a hybrid human and AI approach: Faster, more precise, and meticulously crafted to elevate your written content. Amalgam Editing combines [...]</p>
+            <p class='intro-text'>Revolutionizing editing with a hybrid human and AI approach: Faster, more precise, and meticulously crafted to elevate your written content. Amalgam Editing combines the precision and speed of AI language models and the expertise and quality control of the human mind &mdash; the best of both worlds!</p>
+            
+            <!-- Placeholder for poster image -->
             <img src="hai_editing.png" alt="Hybrid Editing Service Poster" class="intro-banner">
         </section>
+		
+		
         <section>
             <h2 id="services">About Our Services</h2>
-            <p>At Amalgam Editing, we provide meticulous editing and proofreading services to help you polish your written work to perfection. Whether you're an academic or professional, we ensure you[...]</p>
+            <p>At Amalgam Editing, we provide meticulous editing and proofreading services to help you polish your written work to perfection. Whether you're an academic or professional, we ensure your document is clear, concise, and error-free.</p>
         </section>
+
         <section class="services">
+            
             <div class="service">
                 <h3>Basic Editing</h3>
-                <p>Basic Editing involves editing for spelling, grammar, and punctuation. You can expect a quick turnaround time with this option.</p>
+                <p>Basic Editing invovles editing for spelling, grammar, and punctuation. You can expect a quick turnaround time with this option.</p>
             </div>
+            
             <div class="service">
                 <h3>Editing for Fluency</h3>
                 <p>Fluency includes basic editing for spelling, grammar, and punctuation; suggestions for context-based vocabulary alternatives; and suggestions for idiomatic sentence structure.</p>
             </div>
+            
             <div class="service">
                 <h3>Editing for Coherence</h3>
                 <p>Coherence offers document-level check for flow and consistency in addition to all those offered in Fluency.</p>
             </div>
+            
             <div class="service">
-                <h3>The Plus option</h3>
-                <p>In the Plus ("+") option (Fluency+ and Coherence+), the expert human editor will provide you with detailed comments on explanations for edits, suggestions for alternative sentence structures, a[...]</p>
-            </div>
-            <div class="service">
-                <h3>Formatting</h3>
-                <p>Precision formatting ensures your document adheres to specific academic, professional, or publication standards. We meticulously style your document to meet exact journal guidelines, citation for[...]</p>
-            </div>
+				<h3>The Plus option</h3>
+				<p>In the Plus ("+") option (Fluency+ and Coherence+), the expert human editor will provide you with detailed comments on explanations for edits, suggestions for alternative sentence structures, and writing tips. </p>
+			</div>		
+			
+			<div class="service">
+				<h3>Formatting</h3>
+				<p>Formatting
+					Precision formatting ensures your document adheres to specific academic, professional, or publication standards. We meticulously style your document to meet exact journal guidelines, citation formats (APA, MLA, Chicago, etc.), and institutional requirements. </p>
+			</div>
+		
+<!--
+		<div class="service">
+		<h3>Data Visualization</h3>
+		<p>Transform complex data into clear, compelling visual narratives. We help researchers, professionals, and organizations convert raw data into intuitive graphs, charts, and infographics that communicate insights effectively. Our service goes beyond simple plotting, focusing on design principles that enhance data comprehension, storytelling, and visual impact. </p></div>		
+-->
         </section>
+        
         <section class="faq">
-            <h2 id="faq">Frequently Asked Questions</h2>
-            <div class="faq-container">
-                <div class="faq-item">
-                    <div class="faq-question">Why can't I just use ChatGPT to edit? Why do I need an "expert human" editor?</div>
-                    <div class="faq-answer"><p>ChatGPT and similar online AI chatbots are amazing tools and great at writing and editing. However, they do have some limitations. Let's take an example: Consider the se[...]</p></div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">How does this "hybrid H-AI" work?</div>
-                    <div class="faq-answer"><p>Here's the workflow. As the middle part is automated, significant time is saved:</p><img src="workflow.png" alt="ChatGPT response" class="workflow-image"></div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">What kind of documents do you work on?</div>
-                    <div class="faq-answer"><p>We work on a wide array of documents, including books, theses, monographs, reports, and research manuscripts. You can let know what type of document at the time of submi[...]</p></div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">Should the document be in any specific format</div>
-                    <div class="faq-answer"><p>There are no constraints on the format. But note that the AI language model has been implemented to work best on raw text (i.e., without any style formatting and mathema[...]</p></div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">What about the cost?</div>
-                    <div class="faq-answer"><p>It is quite challenging to set a fixed price for editing because the content of a document, in general, can vary extensively based on the subject matter, the target audi[...]</p></div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">What if I'm not satisfied with the work?</div>
-                    <div class="faq-answer"><p>At Amalgam Editing, customer satisfaction is our top priority. If you're not fully satisfied with the initial edit, the editor will conduct a <b>complimentary review proces[...]</p></div>
-                </div>
-            </div>
-        </section>
+		<h2 id="faq">Frequently Asked Questions</h2>
+		<div class="faq-container">
+			
+			<div class="faq-item">
+				<div class="faq-question">Why can't I just use ChatGPT to edit? Why do I need an "expert human" editor?</div>
+				<div class="faq-answer"><p>ChatGPT and similar online AI chatbots are amazing tools and great at writing and editing. However, they do have some limitations. Let's take an example: Consider the sentence  "The definition of 1 coulomb changed with time. At the time of writing, the unit of charge is defined such that the elementary charge value is 1.602176634 × 10⁻¹⁹ C", which needs to be edited. Here's how ChatGPT 4o responds:</p> <img src="whynotGPT.png" alt="ChatGPT response" class="gptresponse"><p>The edited sentence is grammatically and idiomatically perfect, but here's where the expert human editor can make the critical difference. The edited phrase "As of the time of writing" is fine, but in this context, the definition and value of elementary charge are not subject to frequent changes since they are standard quantities. Although the standards can evolve with advances in science, the phrase used gives the impression that this is frequent occurence. So, <b>"Currently"</b> is a better alternative. Here's what ChatGPT says when I probe it further:</p> <img src="whynotGPT2.png" alt="ChatGPT response" class="gptresponse-image"></div>
+				
+			</div>
+			
+			<div class="faq-item">
+				<div class="faq-question">How does this "hybrid H-AI" work?</div>
+				<div class="faq-answer"><p>Here's the workflow. As the middle part is automated, significant time is saved:</p><img src="workflow.png" alt="ChatGPT response"class="workflow-image"></div>
+			</div>
+			
+<!--
+			<div class="faq-item">
+				<div class="faq-question">What can I except from your editing?</div>
+				<div class="faq-answer"><p>Amalgam Editing offers two different types of editing: (1) <b>Fluency</b> and (2) <b>Coherence</b>. Fluency includes basic editing for spelling, grammar, and punctuation; suggestions for context-based vocabulary alternatives; and suggestions for idiomatic sentence structure. Coherence offers document-level check for flow and consistency in addition to all those offered in Fluency. You also have the <b>"+" option</b> (Fluency+ and Coherence+), in which the expert human editor will provide you with detailed comments on explanations for edits, suggestions for alternative sentence structures, and writing tips. Check out the Illustrations section for some examples. </p></div>
+			</div>
+-->
+			
+			<div class="faq-item">
+				<div class="faq-question">What kind of documents do you work on?</div>
+				<div class="faq-answer"><p>We work on a wide array of documents, including books, theses, monographs, reports, and research manuscripts. You can let know what type of document at the time of submitting it, and we will customize the editing process accordingly.</p></div>
+			</div>
+			
+			<div class="faq-item">
+				<div class="faq-question">Should the document be in any specific format</div>
+				<div class="faq-answer"><p>There are no constraints on the format. But note that the AI language model has been implemented to work best on raw text (i.e., without any style formatting and mathematical expressions) in <b>Microsoft Word (.DOCX)</b> format. So, it would be ideal to provide us with the .DOCX file, which is also the most popular dcoument format. Even if your document is in a different format, including <b>TEX</b>, no worries... we can handle them too. We will deliver the final edited document in the format of your choice.</p></div>
+			</div>
+			
+			<div class="faq-item">
+				<div class="faq-question">What about the cost?</div>
+				<div class="faq-answer"><p>It is quite challenging to set a fixed price for editing because the content of a document, in general, can vary extensively based on the subject matter, the target audience, the style and tone (such as formal or informal), and writing skill level of the author. 
+<!--
+				But, if we want to get a rough idea, the following table might help you. Will will notify you of any changes in the price quoted for your document, explaining the reasons.   </p></p><img src="pricetable.png" alt="rate list"class="price-image">
+-->
+				</div>
+			</div>
+			
+			<div class="faq-item">
+				<div class="faq-question">What if I'm not satisfied with the work?</div>
+				<div class="faq-answer">At Amalgam Editing, customer satisfaction is our top priority. If you're not fully satisfied with the initial edit, the editor will conduct a <b>complimentary review process</b>. We'll carefully listen to your specific concerns, discuss the areas where the edit does not meet your expectations, and provide a revised version that precisely addresses your feedback. Our commitment is to ensure you receive a polished document that meets your exact requirements, and this detailed review and refinement process is provided at <b>no additional cost</b> to you. We believe in building long-term relationships with our clients through responsive, client-centered service.</div>
+			</div>
+			
+		</div>
+		</section>
+
+        
     </main>
+
     <footer style="text-align: center; margin-top: 20px; color: #666;">
         <p>© 2024 Amalgam Editing. All Rights Reserved.</p>
     </footer>
